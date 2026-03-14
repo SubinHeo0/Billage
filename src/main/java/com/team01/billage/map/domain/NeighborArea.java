@@ -27,6 +27,6 @@ public class NeighborArea {
     @Column(name = "depth")
     private int depth;
 
-    @Column(columnDefinition = "geometry(MultiPolygon, 4326)", nullable = false)
+    @Column(columnDefinition = "MULTIPOLYGON SRID 4326", nullable = false)
     private MultiPolygon geom;
 }
