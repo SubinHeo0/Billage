@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/user-review")
+@RequestMapping("/api/billage/user-review")
 public class UserReviewController {
 
     private final UserReviewService userReviewService;

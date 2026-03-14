@@ -77,7 +77,7 @@ class UserApiControllerTest {
         String requestBody = new ObjectMapper().writeValueAsString(signupRequest);
 
         // When & Then
-        mockMvc.perform(post("/api/signup")
+        mockMvc.perform(post("/api/billage/signup")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(requestBody)
                         .with(csrf()))

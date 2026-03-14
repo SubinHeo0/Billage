@@ -29,7 +29,7 @@ import java.util.Set;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/chatroom")
+@RequestMapping("/api/billage/chatroom")
 @Tag(name = "Chatroom", description = "채팅방 관련 API")
 public class ChatRoomController {
     private final ChatRoomService chatroomService;

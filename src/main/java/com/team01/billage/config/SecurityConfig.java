@@ -63,7 +63,7 @@ public class SecurityConfig {
                 .headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/chatroom/**", "/connect").authenticated()
+                        .requestMatchers("/api/billage/chatroom/**", "/connect").authenticated()
                         .requestMatchers(
                                 permitAllUrlConfig.getPermitAllUrls()
                                         .toArray(String[]::new)
@@ -75,7 +75,7 @@ public class SecurityConfig {
                         .accessDeniedHandler(customAccessDeniedHandler)
                 )
                 .logout(logout -> logout
-                        .logoutUrl("/api/logout")
+                        .logoutUrl("/api/billage/logout")
                         .logoutSuccessHandler(logoutSuccessHandler)
                         .clearAuthentication(true)
                         .invalidateHttpSession(true)

@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/product-review")
+@RequestMapping("/api/billage/product-review")
 public class ProductReviewController {
 
     private final ProductReviewService productReviewService;

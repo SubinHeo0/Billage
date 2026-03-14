@@ -15,13 +15,13 @@ public class PermitAllUrlConfig {
             "/h2-console/**",
             "/swagger-ui/**",
             "/v3/api-docs/**",
-            "/api/categories",
-            "/api/products/**", // 나중에 GET 메서드만 허용으로 변경
-            "/api/map/**",
-            "/api/chatroom/**",
+            "/api/billage/categories",
+            "/api/billage/products/**", // 나중에 GET 메서드만 허용으로 변경
+            "/api/billage/map/**",
+            "/api/billage/chatroom/**",
             "/connect/**" ,  // SockJs 연결을 위한 엔드포인트
                 "/**",
-                "/api/users/after-login"
+                "/api/billage/users/after-login"
         );
     }
 }

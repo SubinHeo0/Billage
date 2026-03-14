@@ -16,7 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/emd-area")
+@RequestMapping("/api/billage/emd-area")
 @RequiredArgsConstructor
 public class EmdAreaController {
 
