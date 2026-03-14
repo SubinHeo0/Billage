@@ -20,6 +20,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -37,6 +38,9 @@ public class UserService {
     private final UserReviewRepository userReviewRepository;
     private final JavaMailSender emailSender;
     private final RedisTemplate<String, String> redisTemplate;
+
+    @Value("${spring.mail.username}")
+    private String fromEmail;
 
     /**
      * 회원 가입
@@ -87,7 +91,7 @@ public class UserService {
 
         // 이메일 발송
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("kakaobank0314@naver.com");  // 네이버 계정 이메일 추가
+        message.setFrom(fromEmail);  // 구글 계정 이메일 추가
         message.setTo(email);
         message.setSubject("[Billage] 이메일 인증");
         message.setText("인증 코드: " + verificationCode + "\n\n"
@@ -114,7 +118,7 @@ public class UserService {
 
         // 이메일 발송
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("kakaobank0314@naver.com");  // 네이버 계정 이메일 추가
+        message.setFrom(fromEmail);  // 구글 계정 이메일 추가
         message.setTo(email);
         message.setSubject("[Billage] 이메일 인증");
         message.setText("인증 코드: " + verificationCode + "\n\n"
