@@ -91,3 +91,4 @@ server:
     session:
       cookie:
         same-site: none
+  port: 8081
