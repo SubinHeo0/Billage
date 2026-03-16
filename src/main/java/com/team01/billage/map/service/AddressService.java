@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 
 public class AddressService {
 
-    private static final String API_URL = "https://naveropenapi.apigw.ntruss.com/map-reversegeocode/v2/gc";
+    private static final String API_URL = "https://maps.apigw.ntruss.com/map-reversegeocode/v2/gc";
 
 
     public String getAddressFromCoordinates(double latitude, double longitude) {
