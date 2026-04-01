@@ -33,7 +33,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/rental-record")
+@RequestMapping("/api/billage/rental-record")
 public class RentalRecordController {
 
     private final RentalRecordService rentalRecordService;

@@ -73,6 +73,7 @@ public class ChatRoomQueryDSL {
                                         .where(qChat2.chatRoom.eq(qChatroom))
                         ),
                         qProductImage.thumbnail.eq("Y")
+                                .or(qProductImage.isNull()) // 상품이미지가 없는 상품도 불러와야 함
                 )
                 .orderBy(qChat.createdAt.desc(), qChatroom.id.desc())
                 .offset(pageable.getOffset())

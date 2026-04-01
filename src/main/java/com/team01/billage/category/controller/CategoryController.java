@@ -16,7 +16,7 @@ public class CategoryController {
 
     private final CategoryService categoryService;
 
-    @GetMapping("/api/categories")
+    @GetMapping("/api/billage/categories")
     public ResponseEntity<List<CategoryResponseDto>> findCategories() {
         List<CategoryResponseDto> response = categoryService.findCategories();
         return ResponseEntity.status(HttpStatus.OK).body(response);

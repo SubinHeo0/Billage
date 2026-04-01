@@ -25,7 +25,7 @@ import com.team01.billage.config.jwt.UserConstants;
 
 // TokenApiController.java
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/billage")
 @RequiredArgsConstructor
 @Slf4j
 public class TokenApiController {

@@ -51,7 +51,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Tag(name = "User", description = "사용자 관련 API")
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/users")
+@RequestMapping("/api/billage/users")
 @Slf4j
 public class UserApiController {
 

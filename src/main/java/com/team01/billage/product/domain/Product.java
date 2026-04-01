@@ -57,7 +57,7 @@ public class Product {
 
     private Integer weekPrice; // 선택값 (null 가능)
 
-    @Column(columnDefinition = "geometry(Point, 4326)", nullable = false)
+    @Column(columnDefinition = "POINT SRID 4326", nullable = false)
     private Point location; // 경도, 위도
 
     @Column(name = "view_count", nullable = false)
