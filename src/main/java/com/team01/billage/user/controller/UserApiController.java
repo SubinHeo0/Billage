@@ -29,6 +29,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -69,8 +70,22 @@ public class UserApiController {
     })
     @PostMapping("/after-login")
     public ResponseEntity<SimpleUserInfoResponseDto> getSimpleUserInfo(
-        @AuthenticationPrincipal CustomUserDetails userDetails) {
-        SimpleUserInfoResponseDto simpleUserInfoDto = new SimpleUserInfoResponseDto(userDetails);
+            @AuthenticationPrincipal CustomUserDetails userDetails, HttpServletRequest request) {
+
+        // 쿠키에서 accessToken 찾기
+        String accessToken = null;
+        Cookie[] cookies = request.getCookies();
+        if(cookies != null) {
+            for (Cookie cookie : cookies) {
+                if("accessToken".equals(cookie.getName())) {
+                    accessToken = cookie.getValue();
+                    break;
+                }
+            }
+        }
+
+        SimpleUserInfoResponseDto simpleUserInfoDto = new SimpleUserInfoResponseDto(userDetails, accessToken);
+
         return ResponseEntity.ok(simpleUserInfoDto);
     }
 
