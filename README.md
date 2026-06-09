@@ -8,7 +8,7 @@
 
 <br>
 
-✔ (배포 링크)
+✔ https://xfg9fxw41c.execute-api.ap-northeast-2.amazonaws.com
 | **테스트 계정** |        **아이디**        |        **비밀번호**        |
 | :------: | :--------------------: | :--------------------: |
 |  회원1  | anmedi3623@naver.com | test1234 |
@@ -85,7 +85,7 @@
 
 ### 기타
 
-<img src="https://img.shields.io/badge/mapstruct-EE8208?style=for-the-badge&logo=mapstruct&logoColor=white"> <img src="https://img.shields.io/badge/lombok-A42E2B?style=for-the-badge&logo=lombok&logoColor=white"> <img src="https://img.shields.io/badge/swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black">
+<img src="https://img.shields.io/badge/lombok-A42E2B?style=for-the-badge&logo=lombok&logoColor=white"> <img src="https://img.shields.io/badge/swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black">
 
 <br>
 
