@@ -9,7 +9,7 @@
 <br>
 <br>
 
-✔ https://xfg9fxw41c.execute-api.ap-northeast-2.amazonaws.com
+✔ https://9k2howqmuk.execute-api.ap-northeast-2.amazonaws.com
 | **테스트 계정** |        **아이디**        |        **비밀번호**        |
 | :------: | :--------------------: | :--------------------: |
 |  회원1  | anmedi3623@naver.com | test1234 |
